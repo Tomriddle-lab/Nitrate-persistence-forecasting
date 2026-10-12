@@ -1,0 +1,13 @@
+{
+  "target_column": "bt_effluent_no3",
+  "target_unit": "mg/L",
+  "horizons_hours": [1, 2, 4, 6, 8, 12],
+  "development_start": "2024-04-01 00:00:00",
+  "development_end": "2024-12-31 23:59:00",
+  "validation_months": ["2024-09", "2024-10", "2024-11", "2024-12"],
+  "purge_rule": "training label endpoint must be <= the training boundary; validation label endpoint must be <= its validation-month boundary",
+  "persistence_delta_prediction": 0.0,
+  "skill_definition": "1 - model_delta_RMSE / persistence_delta_RMSE",
+  "selection_period": "2024 development data only",
+  "frozen_future_period": "2025-01 through 2025-04; never used for selection"
+}

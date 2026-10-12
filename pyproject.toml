@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wr-nitrate-persistence"
+version = "0.1.0"
+description = "Minimal reference implementation for persistence-benchmarked multi-horizon nitrate forecasting"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scikit-learn==1.4.2",
+  "xgboost==2.0.3",
+  "lightgbm==4.6.0",
+  "catboost==1.2.10"
+]
+
+[project.optional-dependencies]
+interpretation = ["shap>=0.45"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
